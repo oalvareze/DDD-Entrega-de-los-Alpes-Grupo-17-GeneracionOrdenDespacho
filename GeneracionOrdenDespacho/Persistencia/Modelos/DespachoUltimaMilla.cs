@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GeneracionOrdenDespacho.Persistencia.Modelos
 {
+    [Table("despachosultimamilla")]
+
     public class DespachoUltimaMilla
     {
         [Key]
