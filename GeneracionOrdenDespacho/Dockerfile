@@ -5,8 +5,8 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["GeneracionOrdenDespacho/GeneracionOrdenDespachox.csproj", "GeneracionOrdenDespacho/"]
-RUN dotnet restore "GeneracionOrdenDespacho/GeneracionOrdenDespacho2.csproj"
+COPY ["GeneracionOrdenDespacho/GeneracionOrdenDespacho.csproj", "GeneracionOrdenDespacho/"]
+RUN dotnet restore "GeneracionOrdenDespacho/GeneracionOrdenDespacho.csproj"
 COPY . .
 WORKDIR "/src/GeneracionOrdenDespacho"
 RUN dotnet build "GeneracionOrdenDespacho/GeneracionOrdenDespacho.csproj" -c Release -o /app/build
