@@ -1,5 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Worker">
-
+<Project Sdk="Microsoft.NET.Sdk.Worker;Microsoft.NET.Sdk.Publish">
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
@@ -7,7 +6,6 @@
     <UserSecretsId>dotnet-GeneracionOrdenDespacho-c67db6b8-64af-40df-9814-45d217c1bcba</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="DotPulsar" Version="2.10.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-preview.1.23111.4" />
