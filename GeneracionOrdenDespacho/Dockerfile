@@ -9,10 +9,10 @@ COPY ["GeneracionOrdenDespacho/GeneracionOrdenDespacho.csproj", "GeneracionOrden
 RUN dotnet restore "GeneracionOrdenDespacho/GeneracionOrdenDespacho.csproj"
 COPY . .
 WORKDIR "/src/GeneracionOrdenDespacho"
-RUN dotnet build "GeneracionOrdenDespacho.csproj" -c Release -o /app/build
+RUN dotnet build "GeneracionOrdenDespacho/GeneracionOrdenDespacho.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "GeneracionOrdenDespacho.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "GeneracionOrdenDespacho/GeneracionOrdenDespacho.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
